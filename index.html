@@ -14,5 +14,51 @@
         <h2 style="text-align: center;">Geographic Information Science & Technology | Texas A&M University | 2022</h2>
         <h3 style="text-align:center">"madysonbradford@gmail.com | <a href="https://www.linkedin.com/in/madyson-bradford-ab888b161/">LinkedIn</a></h3>
     </div>
+
+    <!-- Tabs for website-->
+    <button class="tablink" onclick="openPage('Home', this, 'green')">Home</button>
+    <button class="tablink" onclick="openPage('Projects', this, 'green')" id="defaultOpen">News</button>
+    <button class="tablink" onclick="openPage('Contact', this, 'green')">Contact</button>
+    <button class="tablink" onclick="openPage('About', this, 'green')">About</button>
+
+    <div id="Home" class="tabcontent">
+    <h3>Home</h3>
+    <p>Homepage</p>
+    </div>
+
+    <div id="Projects" class="tabcontent">
+    <h3>Projects</h3>
+    <p>Projects page</p> 
+    </div>
+
+    <div id="Contact" class="tabcontent">
+    <h3>Contact</h3>
+    <p>Contact page</p>
+    </div>
+
+    <div id="About" class="tabcontent">
+    <h3>About</h3>
+    <p>About me page</p>
+    </div>
+
+    <script>
+    function openPage(pageName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(pageName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+    </script>
+    
 </body>
 </html>
